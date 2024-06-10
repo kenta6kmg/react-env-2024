@@ -1,12 +1,12 @@
 name: Lint and Test
 
-on:push
+on: push
 
 jobs:
   lint-test:
     runs-on: ubuntu-latest
 
-  steps:
+    steps:
     - uses: actions/checkout@v4
 
     - name: Step Node
@@ -15,10 +15,10 @@ jobs:
         node-version: '20'
 
     - name: Install Dependencies
-    run: npm ci
+      run: npm ci
 
     - name: Lint
-    run : npm run lint
+      run: npm run lint
 
     - name: Test
-    run : npm run test
+      run: npm run test
